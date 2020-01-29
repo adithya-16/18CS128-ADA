@@ -1,3 +1,11 @@
+"""
+    Adithya Narasimhan
+    1BM18CS128
+    4-C C3
+    ADA
+    29-01-2020
+"""
+
 print("__input__")
 T = int(input())
 res = list()
@@ -7,7 +15,7 @@ for i in range(T):
     N = int(params[0])
     K = int(params[2])
     array = input()
-    arr = [int(ele) for ele in array.split(' ')]
+    arr = set([int(ele) for ele in array.split(' ')])
     if K in arr:
         res.append(1)
     else:
