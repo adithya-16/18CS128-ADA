@@ -58,9 +58,3 @@ def last(arr, key, loc):
         else:
             high = mid - 1
     return loc
-    
-arr = [ 2, 2, 8, 12, 12, 12, 12, 12 ]
-loc = binary_search(arr, 12)
-print(count(arr, 12, loc))
-print(first(arr, 12, loc))
-print(last(arr, 12, loc))
