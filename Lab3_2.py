@@ -1,29 +1,10 @@
-def merge_sort(arr):
-    mid = len(arr) // 2
-    l = arr[:mid]
-    r = arr[mid:]
-    merge_sort(l)
-    merge_sort(r)
-    i = j = k = 0
-
-    while i < len(l) and j < len(r):
-        if l[i] < r[j]:
-            arr[k] = l[i]
-            i += 1
-        else:
-            arr[j] = r[j]
-            j+=1
-        k += 1
-
-    while i < len(l): 
-        arr[k] = l[i] 
-        i+=1
-        k+=1
-          
-    while j < len(r): 
-        arr[k] = r[j] 
-        j+=1
-        k+=1
+def selection_sort(arr):
+    for i in range(len(arr)-1):
+        min = i
+        for j in range(i+1,len(arr)):
+            if arr[j] < arr[min]:
+                min = j
+        arr[min], arr[i] = arr[i], arr[min]
 
 def k_largest():
     k = int(input("Enter k: "))
